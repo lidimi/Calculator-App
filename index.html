@@ -2,25 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main class="main-container">
+    <div class="title">
+      <h1>calc</h1>
+      <div class="theme-switcher">
+        <p class="theme">theme</p>
+        <div class="switcher">
+          <fieldset>
+            <div class="labels">
+              <label for="1">1</label>
+              <label for="2">2</label>
+              <label for="3">3</label>
+            </div>
+            <div class="inputs">
+              <input type="radio" name="theme" value="1" id="1" checked>
+              <input type="radio" name="theme" value="2" id="2">
+              <input type="radio" name="theme" value="3" id="3">
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <div class="calculator">
+      <div class="calculator-screen">12123</div>
+      <div class="calculator-keyboard">
+        <button class="calc-btn">7</button>
+        <button class="calc-btn">8</button>
+        <button class="calc-btn">9</button>
+        <button class="del-btn">del</button>
+        <button class="calc-btn">4</button>
+        <button class="calc-btn">5</button>
+        <button class="calc-btn">6</button>
+        <button class="calc-btn">+</button>
+        <button class="calc-btn">1</button>
+        <button class="calc-btn">2</button>
+        <button class="calc-btn">3</button>
+        <button class="calc-btn">-</button>
+        <button class="calc-btn">.</button>
+        <button class="calc-btn">0</button>
+        <button class="calc-btn">/</button>
+        <button class="calc-btn">x</button>
+        <button class="reset-btn">reset</button>
+        <button class="equals-btn">=</button>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

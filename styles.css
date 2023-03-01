@@ -1,0 +1,211 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --theme1-background: hsl(222, 26%, 31%);
+  --theme1-keypad-background: hsl(223, 31%, 20%);
+  --theme1-screen: hsl(224, 36%, 15%);
+  --theme1-keys: hsl(30, 25%, 89%);
+  --theme1-eqals-btn: hsl(6, 63%, 50%);
+  --theme1-reset-btn: hsl(225, 21%, 49%);
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+body {
+  background-color: var(--theme1-background);
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "League Spartan", sans-serif;
+}
+
+.main-container {
+  min-width: 600px;
+  max-width: 40%;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.theme {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.calculator-screen {
+  font-size: 3.7rem;
+  padding: 2.5rem 2rem;
+  color: white;
+  background-color: var(--theme1-screen);
+  border-radius: 10px;
+  text-align: right;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.calculator-keyboard {
+  position: relative;
+  background-color: var(--theme1-keypad-background);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  z-index: 0;
+}
+
+.calc-btn {
+  position: relative;
+  border-radius: 7px;
+  padding: 0.7rem;
+  background-color: var(--theme1-keys);
+  color: var(--theme1-keypad-background);
+}
+
+.calc-btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  height: 16px;
+  border-radius: 7px;
+  background-color: hsl(28, 16%, 65%);
+}
+
+.reset-btn {
+  position: relative;
+  font-size: 1.7rem;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: 7px;
+  padding: 0.7rem;
+  background-color: var(--theme1-reset-btn);
+  color: white;
+  text-transform: uppercase;
+}
+
+.del-btn {
+  position: relative;
+  border-radius: 7px;
+  font-size: 1.7rem;
+  background-color: var(--theme1-reset-btn);
+  color: white;
+  text-transform: uppercase;
+}
+
+.reset-btn::after,
+.del-btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  height: 16px;
+  border-radius: 7px;
+  background-color: hsl(224, 28%, 35%);
+}
+
+.equals-btn {
+  position: relative;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  border-radius: 7px;
+  padding: 0.7rem;
+  background-color: var(--theme1-eqals-btn);
+  color: var(--white);
+}
+
+.equals-btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  height: 16px;
+  border-radius: 7px;
+  background-color: hsl(6, 70%, 34%);
+}
+
+.calc-btn:active,
+.del-btn:active,
+.reset-btn:active,
+.equals-btn:active {
+  top: 5px;
+}
+.calc-btn:active::after,
+.del-btn:active::after,
+.reset-btn:active::after,
+.equals-btn:active::after {
+  bottom: 0;
+}
+
+/* SWITCH  */
+
+.theme-switcher {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+fieldset {
+  position: relative;
+  border: none;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--theme1-keypad-background);
+  padding: 0.4rem;
+  border-radius: 25px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: inherit;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--theme1-eqals-btn);
+}
+
+.labels {
+  position: absolute;
+  display: flex;
+  top: -1rem;
+  left: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
