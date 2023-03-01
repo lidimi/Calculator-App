@@ -6,14 +6,52 @@
   box-sizing: border-box;
 }
 
-:root {
-  --white: hsl(0, 0%, 100%);
+[data-theme="1"] {
+  --main-text-color: hsl(0, 0%, 100%);
   --theme1-background: hsl(222, 26%, 31%);
   --theme1-keypad-background: hsl(223, 31%, 20%);
   --theme1-screen: hsl(224, 36%, 15%);
   --theme1-keys: hsl(30, 25%, 89%);
+  --theme-keys-shadow: hsl(28, 16%, 65%);
   --theme1-eqals-btn: hsl(6, 63%, 50%);
+  --theme-equals-btn-shadow: hsl(6, 70%, 34%);
   --theme1-reset-btn: hsl(225, 21%, 49%);
+  --theme-reset-btn-shadow: hsl(224, 28%, 35%);
+  --theme-calc-btn-color: hsl(223, 31%, 20%);
+  --reset-btn-color: hsl(0, 0%, 100%);
+  --equals-btn-color: hsl(0, 0%, 100%);
+}
+
+[data-theme="2"] {
+  --main-text-color: hsl(60, 10%, 19%);
+  --theme1-background: hsl(0, 0%, 90%);
+  --theme1-keypad-background: hsl(0, 5%, 81%);
+  --theme1-screen: hsl(0, 0%, 93%);
+  --theme1-keys: hsl(45, 7%, 89%);
+  --theme-keys-shadow: hsl(35, 11%, 61%);
+  --theme1-eqals-btn: hsl(25, 98%, 40%);
+  --theme-equals-btn-shadow: hsl(25, 99%, 27%);
+  --theme1-reset-btn: hsl(185, 42%, 37%);
+  --theme-reset-btn-shadow: hsl(185, 58%, 25%);
+  --theme-calc-btn-color: hsl(60, 10%, 19%);
+  --reset-btn-color: hsl(0, 0%, 100%);
+  --equals-btn-color: hsl(0, 0%, 100%);
+}
+
+[data-theme="3"] {
+  --main-text-color: hsl(52, 100%, 62%);
+  --theme1-background: hsl(268, 75%, 9%);
+  --theme1-keypad-background: hsl(268, 71%, 12%);
+  --theme1-screen: hsl(268, 71%, 12%);
+  --theme1-keys: hsl(268, 47%, 21%);
+  --theme-keys-shadow: hsl(290, 70%, 36%);
+  --theme1-eqals-btn: hsl(176, 100%, 44%);
+  --theme-equals-btn-shadow: hsl(177, 92%, 70%);
+  --theme1-reset-btn: hsl(281, 89%, 26%);
+  --theme-reset-btn-shadow: hsl(285, 91%, 52%);
+  --theme-calc-btn-color: hsl(52, 100%, 62%);
+  --reset-btn-color: hsl(0, 0%, 100%);
+  --equals-btn-color: hsl(198, 20%, 13%);
 }
 
 button {
@@ -42,7 +80,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--white);
+  color: var(--main-text-color);
   margin-bottom: 2rem;
 }
 
@@ -54,7 +92,7 @@ body {
 .calculator-screen {
   font-size: 3.7rem;
   padding: 2.5rem 2rem;
-  color: white;
+  color: var(--main-text-color);
   background-color: var(--theme1-screen);
   border-radius: 10px;
   text-align: right;
@@ -79,7 +117,7 @@ body {
   border-radius: 7px;
   padding: 0.7rem;
   background-color: var(--theme1-keys);
-  color: var(--theme1-keypad-background);
+  color: var(--theme-calc-btn-color);
 }
 
 .calc-btn::after {
@@ -91,7 +129,7 @@ body {
   left: 0;
   height: 16px;
   border-radius: 7px;
-  background-color: hsl(28, 16%, 65%);
+  background-color: var(--theme-keys-shadow);
 }
 
 .reset-btn {
@@ -102,7 +140,7 @@ body {
   border-radius: 7px;
   padding: 0.7rem;
   background-color: var(--theme1-reset-btn);
-  color: white;
+  color: var(--reset-btn-color);
   text-transform: uppercase;
 }
 
@@ -111,7 +149,7 @@ body {
   border-radius: 7px;
   font-size: 1.7rem;
   background-color: var(--theme1-reset-btn);
-  color: white;
+  color: var(--reset-btn-color);
   text-transform: uppercase;
 }
 
@@ -125,7 +163,7 @@ body {
   left: 0;
   height: 16px;
   border-radius: 7px;
-  background-color: hsl(224, 28%, 35%);
+  background-color: var(--theme-reset-btn-shadow);
 }
 
 .equals-btn {
@@ -135,7 +173,7 @@ body {
   border-radius: 7px;
   padding: 0.7rem;
   background-color: var(--theme1-eqals-btn);
-  color: var(--white);
+  color: var(--equals-btn-color);
 }
 
 .equals-btn::after {
@@ -147,7 +185,7 @@ body {
   left: 0;
   height: 16px;
   border-radius: 7px;
-  background-color: hsl(6, 70%, 34%);
+  background-color: var(--theme-equals-btn-shadow);
 }
 
 .calc-btn:active,
