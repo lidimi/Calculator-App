@@ -20,6 +20,9 @@
   --theme-calc-btn-color: hsl(223, 31%, 20%);
   --reset-btn-color: hsl(0, 0%, 100%);
   --equals-btn-color: hsl(0, 0%, 100%);
+  --keys-btn-hover: hsl(30, 25%, 100%);
+  --reset-btn-hover: hsl(225, 21%, 60%);
+  --equals-btn-hover: hsl(6, 63%, 60%);
 }
 
 [data-theme="2"] {
@@ -36,6 +39,9 @@
   --theme-calc-btn-color: hsl(60, 10%, 19%);
   --reset-btn-color: hsl(0, 0%, 100%);
   --equals-btn-color: hsl(0, 0%, 100%);
+  --keys-btn-hover: hsl(30, 25%, 100%);
+  --reset-btn-hover: hsl(185, 42%, 50%);
+  --equals-btn-hover: hsl(25, 98%, 50%);
 }
 
 [data-theme="3"] {
@@ -52,6 +58,9 @@
   --theme-calc-btn-color: hsl(52, 100%, 62%);
   --reset-btn-color: hsl(0, 0%, 100%);
   --equals-btn-color: hsl(198, 20%, 13%);
+  --keys-btn-hover: hsl(285, 91%, 52%);
+  --reset-btn-hover: hsl(290, 70%, 40%);
+  --equals-btn-hover: hsl(177, 92%, 60%);
 }
 
 button {
@@ -200,6 +209,19 @@ body {
 .reset-btn:active::after,
 .equals-btn:active::after {
   bottom: 0;
+}
+
+.calc-btn:hover {
+  background-color: var(--keys-btn-hover);
+}
+
+.reset-btn:hover,
+.del-btn:hover {
+  background-color: var(--reset-btn-hover);
+}
+
+.equals-btn:hover {
+  background-color: var(--equals-btn-hover);
 }
 
 /* SWITCH  */
