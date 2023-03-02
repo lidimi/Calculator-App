@@ -90,6 +90,7 @@ body {
 }
 
 .calculator-screen {
+  height: 13vh;
   font-size: 3.7rem;
   padding: 2.5rem 2rem;
   color: var(--main-text-color);
